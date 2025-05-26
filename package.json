@@ -16,10 +16,8 @@
   "dependencies": {
     "@fortawesome/fontawesome-free": "^6.7.2",
     "@glidejs/glide": "^3.7.1",
-    "pdfjs-dist": "^3.4.120",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
-    "react-pdf": "^7.0.0",
     "react-router-dom": "^6.30.0"
   },
   "devDependencies": {
