@@ -14,7 +14,7 @@ export default function Header() {
             {/* Logo */}
             <div className="logo-outer">
               <Link to="/">
-                <img src="./../../public/logo.jpeg" alt="Logo" className="h-28 w-40" />
+                <img src="qfi.jpeg" alt="Logo" className="h-28 w-40" />
               </Link>
             </div>
 
