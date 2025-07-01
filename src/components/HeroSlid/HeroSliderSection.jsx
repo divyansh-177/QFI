@@ -3,19 +3,19 @@ import Glide from "@glidejs/glide";
 import "@glidejs/glide/dist/css/glide.core.min.css";
 
 // Import images so they're pre-bundled and loaded at startup
-import supportImg from "./../../../public/nutb/Slide1.jpeg";
-import plantImg from "./../../../public/nutb/Slide2.jpeg";
+import supportImg from "./../../../public/abt2.jpeg";
+import plantImg from "./../../../public/workman.jpg";
 import productsImg from "./../../../public/nutb/Slide3.jpeg";
 import whatsappQr from "./../../../public/nutb/Slide1.jpeg";
 
 const slides = [
   {
     img: supportImg,
-    subtitle: "Reliable Supplier",
-    title: "Always Customer <span class='text-yellow-500'>First</span>",
+    subtitle: "",
+    title: "Customer Satisfaction <span class='text-orange-700'>is our 1st Priority</span>",
     desc: [
-      "Direct supplier to Tier-1s/ Tier-2s of leading OEMs in India.",
-      "Call Us for Order or Inquiry",
+      "100% visual and dimensional inspectionat all stages till dispatch.",
+      "100% thread plug gauge go / notgo .",
     ],
     phone: "+91 9654480999",
     qr: whatsappQr,

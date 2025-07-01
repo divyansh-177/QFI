@@ -80,19 +80,21 @@ export default function Sendm() {
                 <ul className="contact-info space-y-3 mt-2">
                   <li className="flex items-start">
                     <FaMapMarkerAlt className="text-2xl mr-3 text-blue-400 flex-shrink-0" />
-                    <span>Plot No. 16, IDC Industrial Area, Hisar Road, Rohtak-124001</span>
+                    <span>Plot No.78, HSIDC, Hisar Road, Rohtak - 124001</span>
                   </li>
                   <li className="flex items-center">
                     <FaPhoneAlt className="text-2xl mr-3 text-green-400 flex-shrink-0" />
-                    <a href="tel:+919818200118" className="underline hover:text-white">+(91)-9812090620</a>
+                    <a href="tel:+917056720653" className="underline hover:text-white">+(91)-7056720653   </a>
+                    &nbsp; &nbsp; 
+                    <a href="tel:+918053500556" className="underline hover:text-white"> +(91)-8053500556</a>
                   </li>
                   <li className="flex items-center">
                     <FaEnvelope className="text-2xl mr-3 text-red-400 flex-shrink-0" />
-                    <a href="mailto:info@avtfastners.com" className="underline hover:text-white">info@avtfastners.com</a>
+                    <a href="mailto:qualityfastenersindia@gmail.com" className="underline hover:text-white">qualityfastenersindia@gmail.com</a>
                   </li>
                   <li className="flex items-start">
                     <FaClock className="text-2xl mr-3 text-yellow-400 flex-shrink-0" />
-                    <span>Mon - Sat: 10 am - 8 pm</span>
+                    <span>Mon - Sat: 10 am - 6 pm</span>
                   </li>
                 </ul>
               </div>

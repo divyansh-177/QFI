@@ -4,7 +4,7 @@ import App from './App.jsx'
 import './index.css'
 import { RouterProvider, createBrowserRouter } from 'react-router-dom'
 import Home from './components/Home/Home'
-import About from './components/About/About'
+import About2 from './components/About/About2'
 import Contact from './components/contact/contact.jsx'
 import Prod from './components/Products/Prod.jsx'
 import LoadFontAwesome from './LoadFontAwesome'  // import your loader
@@ -15,7 +15,7 @@ const router = createBrowserRouter([
         element : <App />,
         children : [
             { path: "", element: <Home /> },
-            { path: "about", element: <About /> },
+            { path: "about2", element: <About2 /> },
             { path: "products", element: <Prod /> },
             { path: "contact", element: <Contact /> }
         ]

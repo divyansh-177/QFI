@@ -5,45 +5,45 @@ import '@fortawesome/fontawesome-free/css/all.min.css';
 
 const products = [
   {
-    primaryImg: './../../../public/nutb/All Metal Torque Lock Nuts.jpeg',
-    secondaryImg: './../../../public/nutb/All Metal Torque Lock Nuts.jpeg',
-    title: 'All Metal Torque Lock Nuts',
-  },
-  {
-    primaryImg: './../../public/nutb/-209x170/flange_nuts.png',
-    secondaryImg: './../../public/nutb/-209x170/flange_nuts_alt.png',
-    title: 'Flange Nuts',
-  },
-  {
-    primaryImg: './../../public/nutb/-209x170/hex_nuts.png',
-    secondaryImg: './../../public/nutb/-209x170/hex_nuts_alt.png',
+    primaryImg: 'nutb/hex_nuts.jpeg',
+    secondaryImg: 'nutb/hex_nuts.jpeg',
     title: 'Hex Nuts',
   },
   {
-    primaryImg: './../../public/nutb/-209x170/lock_nuts.png',
-    secondaryImg: './../../public/nutb/-209x170/lock_nuts_alt.png',
-    title: 'Lock Nuts',
+    primaryImg: 'nutb/SerratedFlange.jpeg',
+    secondaryImg: 'nutb/SerratedFlange.jpeg',
+    title: 'Serrated Flange Nuts',
   },
   {
-    primaryImg: './../../public/nutb/-209x170/cap_nuts.png',
-    secondaryImg: './../../public/nutb/-209x170/cap_nuts_alt.png',
-    title: 'Cap Nuts',
+    primaryImg: 'nutb/hex_nuts.jpeg',
+    secondaryImg: 'nutb/hex_nuts.jpeg',
+    title: 'Hex Nuts',
   },
   {
-    primaryImg: './../../public/nutb/-209x170/wheel_nuts.png',
-    secondaryImg: './../../public/nutb/-209x170/wheel_nuts_alt.png',
+    primaryImg: 'nutb/Selfclinchingnuts.jpeg',
+    secondaryImg: 'nutb/Selfclinchingnuts.jpeg',
+    title: 'Self Clinching Nuts',
+  },
+  {
+    primaryImg: 'nutb/Flangnut.jpeg',
+    secondaryImg: 'nutb/Flangnut.jpeg',
+    title: 'Flang Nuts',
+  },
+  {
+    primaryImg: 'nutb/Wheelnuts.jpeg',
+    secondaryImg: 'nutb/Wheelnuts.jpeg',
     title: 'Wheel Nuts',
   },
   {
-    primaryImg: './../../public/nutb/-209x170/weld_nuts.png',
-    secondaryImg: './../../public/nutb/-209x170/weld_nuts_alt.png',
-    title: 'Weld Nuts',
+    primaryImg: 'nutb/Specialstepnut.jpeg',
+    secondaryImg: 'nutb/Specialstepnut.jpeg',
+    title: 'Special Step Nuts',
   },
   {
-    primaryImg: './../../public/nutb/-209x170/nyloc_nuts.png',
-    secondaryImg: './../../public/nutb/-209x170/nyloc_nuts_alt.png',
-    title: 'Nyloc Nuts',
-  },
+    primaryImg: 'nutb/Collarstay.jpeg',
+    secondaryImg: 'nutb/Collarstay.jpeg',
+    title: 'Collar Stay',
+  }
 ];
 
 function Prod2() {
@@ -56,7 +56,7 @@ function Prod2() {
         <div className="container mx-auto">
           <ProGrid />
         </div>
-      </ProductProvider>
+      </ProductProvider> 
    </>
   );
 }

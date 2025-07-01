@@ -70,7 +70,7 @@ export default function Header() {
             <nav className={`main-menu ${menuOpen ? 'block' : 'hidden'} lg:block w-full lg:w-auto`}>
               <ul className="flex flex-col lg:flex-row lg:space-x-6 text-gray-700 font-medium bg-white lg:bg-transparent p-4 lg:p-0 rounded-lg shadow lg:shadow-none">
                 <li><Link to="/" className="hover:text-orange-700 transition">Home</Link></li>
-                <li><Link to="/about" className="hover:text-orange-700 transition">About Us</Link></li>
+                <li><Link to="/about2" className="hover:text-orange-700 transition">About Us</Link></li>
 
                 <li className="relative group">
                   <span className="flex items-center cursor-pointer hover:text-orange-700 transition"><Link to="/products" className="hover:text-orange-700 transition">Our Products</Link></span>
