@@ -43,6 +43,8 @@ export default function Header() {
                 <div>
                   <div className="font-semibold">MAIL US</div>
                   <a href="mailto:qualityfastenersindia@gmail.com" className="text-blue-600 hover:underline">qualityfastenersindia@gmail.com</a> 
+                  <br />
+                  <a href="mailto:qualityfastenersindiasales@gmail.com" className="text-blue-600 hover:underline">qualityfastenersindiasales@gmail.com</a> 
                   </div>
               </div>
               <div className="flex items-center space-x-3">
@@ -71,6 +73,7 @@ export default function Header() {
               <ul className="flex flex-col lg:flex-row lg:space-x-6 text-gray-700 font-medium bg-white lg:bg-transparent p-4 lg:p-0 rounded-lg shadow lg:shadow-none">
                 <li><Link to="/" className="hover:text-orange-700 transition">Home</Link></li>
                 <li><Link to="/about2" className="hover:text-orange-700 transition">About Us</Link></li>
+                <li><Link to="/about" className="hover:text-orange-700 transition">Certifications</Link></li>
 
                 <li className="relative group">
                   <span className="flex items-center cursor-pointer hover:text-orange-700 transition"><Link to="/products" className="hover:text-orange-700 transition">Our Products</Link></span>
@@ -79,7 +82,6 @@ export default function Header() {
                   </div>
                 </li>
 
-                <li><Link to="/enquiry" className="hover:text-orange-700 transition">Enquiry</Link></li>
                 <li><Link to="/contact" className="hover:text-orange-700 transition">Contact Us</Link></li>
                 <li>
                   <a

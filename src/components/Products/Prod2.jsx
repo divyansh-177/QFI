@@ -15,9 +15,9 @@ const products = [
     title: 'Serrated Flange Nuts',
   },
   {
-    primaryImg: 'nutb/hex_nuts.jpeg',
-    secondaryImg: 'nutb/hex_nuts.jpeg',
-    title: 'Hex Nuts',
+    primaryImg: 'nutb/lock_nuts.jpeg',
+    secondaryImg: 'nutb/lock_nuts.jpeg',
+    title: 'Lock Nuts',
   },
   {
     primaryImg: 'nutb/Selfclinchingnuts.jpeg',
@@ -43,6 +43,25 @@ const products = [
     primaryImg: 'nutb/Collarstay.jpeg',
     secondaryImg: 'nutb/Collarstay.jpeg',
     title: 'Collar Stay',
+  },
+  {
+    primaryImg: 'nutb/Tnut.jpeg',
+    secondaryImg: 'nutb/Tnut.jpeg',
+    title: 'T Nuts',
+  },{
+    primaryImg: 'nutb/Tbush.jpeg',
+    secondaryImg: 'nutb/Tbush.jpeg',
+    title: 'T Bush',
+  },
+  {
+    primaryImg: 'nutb/sq_weld.jpeg',
+    secondaryImg: 'nutb/sq_weld.jpeg',
+    title: 'Square Weld Nuts',
+  },
+  {
+    primaryImg: 'nutb/Sp_bush.jpeg',
+    secondaryImg: 'nutb/Sp_bush.jpeg',
+    title: 'Special Bush / Collor stay',
   }
 ];
 

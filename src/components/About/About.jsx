@@ -8,7 +8,9 @@ export default function About() {
               Quality Evaluations Certificates
             </h2>
             <p className="mt-4 text-gray-600">
-              These PDF previews are protected — no downloads, no printing.
+               Work done as per ISO 9001:2015 standards. <br/>
+      Work done as per IATF 16949:2016 standards. <br/>
+      Planning for BIS.
             </p>
           </div>
 

@@ -8,7 +8,7 @@ export default function Home() {
     <div className="mx-auto w-full max-full">
       <HeroSliderSection />
 
-      <h1 className="text-center text-2xl font-bold mb-6 text-orange-600 mt-10">Our Products</h1>
+      <h1 className="text-center text-4xl font-bold mb-6 mt-10">Our Products</h1>
       <Prod2 />
 
       {/* View More Button */}

@@ -16,10 +16,10 @@ const products = [
     secondaryImg: 'nutb/SerratedFlange.jpeg',
     title: 'Serrated Flange Nuts',
   },
-  {
-    primaryImg: 'nutb/hex_nuts.jpeg',
-    secondaryImg: 'nutb/hex_nuts.jpeg',
-    title: 'Hex Nuts',
+   {
+    primaryImg: 'nutb/lock_nuts.jpeg',
+    secondaryImg: 'nutb/lock_nuts.jpeg',
+    title: 'Lock Nuts',
   },
   {
     primaryImg: 'nutb/Selfclinchingnuts.jpeg',
@@ -54,6 +54,16 @@ const products = [
     primaryImg: 'nutb/Tbush.jpeg',
     secondaryImg: 'nutb/Tbush.jpeg',
     title: 'T Bush',
+  },
+  {
+    primaryImg: 'nutb/sq_weld.jpeg',
+    secondaryImg: 'nutb/sq_weld.jpeg',
+    title: 'Square Weld Nuts',
+  },
+  {
+    primaryImg: 'nutb/Sp_bush.jpeg',
+    secondaryImg: 'nutb/Sp_bush.jpeg',
+    title: 'Special Bush / Collor stay',
   }
 ];
 
@@ -64,10 +74,7 @@ export default function Prod() {
   }, []);
  {
   const points = [
-    'Mild steel and High Tensile Cold Forged Nuts from M2 to M24',
-    'Mild steel and High Tensile Cold Forged Bolts from M5 to M24 with length up to 300 mm.',
-    'Components machined on Traubs, CNC, VMC, Milling, CLG, Power Press, etc.',
-    'Specialized and critical components which are cold/hot forged followed by high precision machining on various machines.',
+   
   ];
 
   return (
@@ -77,9 +84,9 @@ export default function Prod() {
 
       <div className="w-full py-6">
         <div className="mb-6">
-          <span className="text-lg font-bold text-orange-600 block text-left px-20">
+          {/* <span className="text-lg font-bold text-orange-600 block text-left px-20">
             Our range of products includes:-
-          </span>
+          </span> */}
         </div>
 
         <div className="space-y-4 px-20">

@@ -2,45 +2,47 @@ import React, { useEffect } from "react";
 import Glide from "@glidejs/glide";
 import "@glidejs/glide/dist/css/glide.core.min.css";
 
-// Import images so they're pre-bundled and loaded at startup
-import supportImg from "./../../../public/abt2.jpeg";
-import plantImg from "./../../../public/workman.jpg";
-import productsImg from "./../../../public/nutb/Slide3.jpeg";
-import whatsappQr from "./../../../public/nutb/Slide1.jpeg";
+// Import images
+import supportImg from "./../../../public/cust3.jpg";
+import plantImg from "./../../../public/abt.jpeg";
+import home3 from "./../../../public/home3.jpeg";
+import home4 from "./../../../public/home4.jpeg";
+import home5 from "./../../../public/home5.jpeg";
 
+// Each slide can have 1–4 images
 const slides = [
   {
-    img: supportImg,
-    subtitle: "",
-    title: "Customer Satisfaction <span class='text-orange-700'>is our 1st Priority</span>",
+    images: [supportImg],
+    title:
+      "Customer Satisfaction <span class='text-green-400'>is our 1st Priority</span>",
     desc: [
-      "100% visual and dimensional inspectionat all stages till dispatch.",
-      "100% thread plug gauge go / notgo .",
+      { heading: "Inspection Process" },
+      { text: "100% visual and dimensional inspection at all stages till dispatch." },
+      { text: "100% thread plug gauge go / not go." },
+      { heading: "Certifications" },
+      { text: "Work done as per ISO 9001:2015 standards." },
+      { text: "Work done as per IATF 16949:2016 standards." },
+      { text: "Planning for BIS." },
     ],
-    phone: "+91 9654480999",
-    qr: whatsappQr,
   },
   {
-    img: plantImg,
-    subtitle: "Plant Area",
-    title: "45000 <span class='text-yellow-500'>sq. ft.</span>",
+    images: [plantImg, home3, home4, home5],
+    title: "Tool room + Manufacturing facilities",
     desc: [
-      "Main Plant on Jind Road, Rohtak and 5000 sq. ft. Secondary Operations Plant on Hisar Road, Haryana.",
-      "Call Us for Order or Inquiry",
+      { heading: "Manufacturing" },
+      { text: "2 * 11 B 5 stations nut former machines" },
+      { text: "2 * 14 B 6 stations nut forming machines" },
+      { text: "1 * 19 B 5 stations machines" },
+      { text: "(These machines are capable of manufacturing M2.5 to M12 cold forge nuts)" },
+      { heading: "Tapping" },
+      { text: "Flange Tapping Machine capable upto M4 to M12 flange nuts." },
+      { text: "4 * Tapping Machine capable upto M2.5 to M12 nuts." },
+      { heading: "Tool Room Facility" },
+      { text: " Electric Discharge Machines." },
+      { text: " 3x Surface Grinding Machines." },
+      { text: " 3x Lathe Machines." },
+      { text: "Cylindrical Grinding Machine." }
     ],
-    phone: "+91 9616480999",
-    qr: whatsappQr,
-  },
-  {
-    img: productsImg,
-    subtitle: "Quality Assurance",
-    title: "Best Quality <span class='text-yellow-500'>Products</span>",
-    desc: [
-      "High quality and precision manufacturer of cold forged nuts, bolts, standard and special fasteners/auto components located in Rohtak (Haryana), India.",
-      "Call Us for Order or Inquiry",
-    ],
-    phone: "+91 9616480999",
-    qr: whatsappQr,
   },
 ];
 
@@ -62,60 +64,86 @@ export default function HeroSlider() {
   }, []);
 
   return (
-    <section className=" py-10">
+    <section className="py-10">
       <style>{`
-        .glide__bullet { width: 0.75rem; height: 0.75rem; background-color: #6B7280; border-radius: 9999px; margin: 0 0.25rem; transition: all 0.3s ease; }
-        .glide__bullet--active { background-color: #FBBF24; width: 1rem; height: 1rem; }
+        .glide__bullet {
+          width: 0.75rem;
+          height: 0.75rem;
+          background-color: #6B7280;
+          border-radius: 9999px;
+          margin: 0 0.25rem;
+          transition: all 0.3s ease;
+        }
+        .glide__bullet--active {
+          background-color: #FBBF24;
+          width: 1rem;
+          height: 1rem;
+        }
       `}</style>
 
       <div className="glide max-w-7xl mx-auto cursor-grab">
         <div className="glide__track" data-glide-el="track">
           <ul className="glide__slides">
-            {slides.map((slide, idx) => (
-              <li
-                key={idx}
-                className="glide__slide bg-white shadow-md rounded-lg overflow-hidden flex flex-col lg:flex-row h-[600px]"
-              >
-                <div className="lg:w-1/2 h-full">
-                  <img
-                    src={slide.img}
-                    alt="slide-img"
-                    loading="eager"
-                    className="w-full h-full object-cover"
-                  />
-                </div>
-                <div className="lg:w-1/2 p-6 flex flex-col justify-center h-full">
-                  <span className="text-lg text-gray-700 font-semibold">
-                    {slide.subtitle}
-                  </span>
-                  <h2
-                    className="text-3xl font-bold text-gray-900 mb-4"
-                    dangerouslySetInnerHTML={{ __html: slide.title }}
-                  ></h2>
-                  {slide.desc.map((d, i) => (
-                    <p key={i} className="text-gray-700 mb-2">
-                      {d}
-                    </p>
-                  ))}
-                  <a
-                    className="mt-4 inline-block text-white bg-green-600 hover:bg-green-700 px-6 py-2 rounded-md shadow-md transition"
-                    href={`tel:${slide.phone}`}
-                  >
-                    <i className="fa fa-mobile fa-lg mr-2"></i>
-                    {slide.phone}
-                  </a>
-                  <p className="mt-4 text-sm">Scan QR code to start Chat with us.</p>
-                  <img
-                    src={slide.qr}
-                    alt="whatsapp-qr"
-                    loading="eager"
-                    className="mt-2 w-24 h-24 object-contain"
-                  />
-                </div>
-              </li>
-            ))}
+            {slides.map((slide, idx) => {
+              const isSingleImage = slide.images.length === 1; // Fixed typo here
+
+              return (
+                <li
+                  key={idx}
+                  className="glide__slide bg-white shadow-md rounded-lg overflow-hidden flex flex-col lg:flex-row h-[600px]"
+                >
+                  {/* Image Section */}
+                  <div className={`lg:w-1/2 h-1/2 lg:h-full ${isSingleImage ? "" : "grid grid-cols-2 grid-rows-2"}`}> 
+                    {slide.images.map((img, i) => (
+                      <div
+                        key={i}
+                        className={`w-full h-full ${isSingleImage ? "" : "aspect-square"}`}
+                      >
+                        <img
+                          src={img}
+                          alt={`slide-img-${i}`}
+                          className="w-full h-full object-cover"
+                        />
+                      </div>
+                    ))}
+                  </div>
+
+                  {/* Text Section */}
+                  <div className="lg:w-1/2 p-6 flex flex-col justify-center h-full">
+                    {slide.subtitle && (
+                      <span className="text-lg text-gray-700 font-semibold mb-1">
+                        {slide.subtitle}
+                      </span>
+                    )}
+                    <h2
+                      className="text-3xl font-bold text-gray-900 mb-4"
+                      dangerouslySetInnerHTML={{ __html: slide.title }}
+                    ></h2>
+
+                    <div className="text-gray-700 mb-4 space-y-2">
+                      {slide.desc.map((item, i) =>
+                        item.heading ? (
+                          <h3
+                            key={i}
+                            className="text-lg font-semibold mt-4 text-green-400"
+                          >
+                            {item.heading}
+                          </h3>
+                        ) : (
+                          <ul key={i} className="list-disc pl-5">
+                            <li>{item.text}</li>
+                          </ul>
+                        )
+                      )}
+                    </div>
+                  </div>
+                </li>
+              );
+            })}
           </ul>
         </div>
+
+        {/* Bullet Nav */}
         <div
           className="glide__bullets flex justify-center mt-4"
           data-glide-el="controls[nav]"
@@ -129,7 +157,6 @@ export default function HeroSlider() {
           ))}
         </div>
       </div>
-     
     </section>
   );
 }
