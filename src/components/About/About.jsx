@@ -18,7 +18,7 @@ export default function About() {
           <div className="md:w-8/12 flex gap-4 overflow-x-auto">
             <div className="w-1/2 space-y-4">
               <img
-                src="qfi.jpeg"
+                src="ISO_upd.jpeg"
                 alt="PDF 1 - Page 1"
                 className="w-full rounded shadow"
               />
@@ -27,7 +27,7 @@ export default function About() {
 
             <div className="w-1/2 space-y-4">
               <img
-                src="./../../public/QFI_IATF.png"
+                src="QFI_IATF.png"
                 alt="PDF 2 - Page 1"
                 className="w-full rounded shadow"
               />
