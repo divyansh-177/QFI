@@ -18,7 +18,7 @@ export default function About() {
           <div className="md:w-8/12 flex gap-4 overflow-x-auto">
             <div className="w-1/2 space-y-4">
               <img
-                src="./../../public/ISO_upd.png"
+                src="ISO_upd.png"
                 alt="PDF 1 - Page 1"
                 className="w-full rounded shadow"
               />
