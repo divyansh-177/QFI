@@ -1,20 +1,19 @@
+// HeroSliderSection.jsx
 import React, { useEffect } from "react";
 import Glide from "@glidejs/glide";
 import "@glidejs/glide/dist/css/glide.core.min.css";
 
-// Import images
+// Import images (adjust paths as needed)
 import supportImg from "./../../../public/cust3.jpg";
 import plantImg from "./../../../public/abt.jpeg";
 import home3 from "./../../../public/home3.jpeg";
 import home4 from "./../../../public/home4.jpeg";
 import home5 from "./../../../public/home5.jpeg";
 
-// Each slide can have 1–4 images
-const slides = [
+const defaultSlides = [
   {
     images: [supportImg],
-    title:
-      "Customer Satisfaction <span class='text-green-400'>is our 1st Priority</span>",
+    title: "Customer Satisfaction <span class='text-green-400'>is our 1st Priority</span>",
     desc: [
       { heading: "Inspection Process" },
       { text: "100% visual and dimensional inspection at all stages till dispatch." },
@@ -38,22 +37,30 @@ const slides = [
       { text: "Flange Tapping Machine capable upto M4 to M12 flange nuts." },
       { text: "4 * Tapping Machine capable upto M2.5 to M12 nuts." },
       { heading: "Tool Room Facility" },
-      { text: " Electric Discharge Machines." },
-      { text: " 3x Surface Grinding Machines." },
-      { text: " 3x Lathe Machines." },
-      { text: "Cylindrical Grinding Machine." }
+      { text: "Electric Discharge Machines." },
+      { text: "3x Surface Grinding Machines." },
+      { text: "3x Lathe Machines." },
+      { text: "Cylindrical Grinding Machine." },
     ],
   },
 ];
 
-export default function HeroSlider() {
+/**
+ * HeroSliderSection
+ * @param {Object[]} slides - array of slide objects
+ * @param {number} autoplayInterval - time in ms between slide auto-changes
+ */
+export default function HeroSliderSection({ slides = defaultSlides, autoplayInterval = 5000 }) {
+  const slideCount = Array.isArray(slides) ? slides.length : 0;
+
   useEffect(() => {
+    if (!slideCount) return;
     const glide = new Glide(".glide", {
       type: "carousel",
       perView: 1,
       focusAt: "center",
       gap: 20,
-      autoplay: 5000,
+      autoplay: autoplayInterval,
       animationDuration: 1500,
       hoverpause: true,
       dragThreshold: 80,
@@ -61,44 +68,35 @@ export default function HeroSlider() {
     });
     glide.mount();
     return () => glide.destroy();
-  }, []);
+  }, [slideCount, autoplayInterval]);
+
+  if (!slideCount) {
+    return <p className="text-center p-8">No slides available.</p>;
+  }
 
   return (
-    <section className="py-10">
+    <section className="py-6">
       <style>{`
-        .glide__bullet {
-          width: 0.75rem;
-          height: 0.75rem;
-          background-color: #6B7280;
-          border-radius: 9999px;
-          margin: 0 0.25rem;
-          transition: all 0.3s ease;
-        }
-        .glide__bullet--active {
-          background-color: #FBBF24;
-          width: 1rem;
-          height: 1rem;
-        }
+        .glide__bullet { width: 0.75rem; height: 0.75rem; background-color: #6B7280; border-radius: 9999px; margin: 0 0.25rem; transition: all 0.3s ease; }
+        .glide__bullet--active { background-color: #FBBF24; width: 1rem; height: 1rem; }
       `}</style>
 
-      <div className="glide max-w-7xl mx-auto cursor-grab">
+      <div className="glide max-w-7xl mx-auto">
         <div className="glide__track" data-glide-el="track">
           <ul className="glide__slides">
             {slides.map((slide, idx) => {
-              const isSingleImage = slide.images.length === 1; // Fixed typo here
-
+              const isSingle = slide.images.length === 1;
               return (
                 <li
                   key={idx}
                   className="glide__slide bg-white shadow-md rounded-lg overflow-hidden flex flex-col lg:flex-row h-[600px]"
                 >
-                  {/* Image Section */}
-                  <div className={`lg:w-1/2 h-1/2 lg:h-full ${isSingleImage ? "" : "grid grid-cols-2 grid-rows-2"}`}> 
+                  {/* Image Panel */}
+                  <div
+                    className={`order-1 w-full lg:w-1/2 ${isSingle ? 'h-full' : 'grid grid-cols-2 grid-rows-2 gap-1'}`}
+                  >
                     {slide.images.map((img, i) => (
-                      <div
-                        key={i}
-                        className={`w-full h-full ${isSingleImage ? "" : "aspect-square"}`}
-                      >
+                      <div key={i} className={isSingle ? 'w-full h-full' : 'aspect-square'}>
                         <img
                           src={img}
                           alt={`slide-img-${i}`}
@@ -108,30 +106,24 @@ export default function HeroSlider() {
                     ))}
                   </div>
 
-                  {/* Text Section */}
-                  <div className="lg:w-1/2 p-6 flex flex-col justify-center h-full">
-                    {slide.subtitle && (
-                      <span className="text-lg text-gray-700 font-semibold mb-1">
-                        {slide.subtitle}
-                      </span>
-                    )}
+                  {/* Text Panel (scrollable) */}
+                  <div className="order-2 w-full lg:w-1/2 p-4 md:p-6 flex flex-col overflow-y-auto max-h-full">
                     <h2
-                      className="text-3xl font-bold text-gray-900 mb-4"
+                      className="text-2xl sm:text-3xl md:text-4xl font-bold text-gray-900 mb-4"
                       dangerouslySetInnerHTML={{ __html: slide.title }}
-                    ></h2>
-
-                    <div className="text-gray-700 mb-4 space-y-2">
+                    />
+                    <div className="text-gray-700 space-y-2">
                       {slide.desc.map((item, i) =>
                         item.heading ? (
                           <h3
                             key={i}
-                            className="text-lg font-semibold mt-4 text-green-400"
+                            className="text-base md:text-lg font-semibold mt-4 text-green-400"
                           >
                             {item.heading}
                           </h3>
                         ) : (
                           <ul key={i} className="list-disc pl-5">
-                            <li>{item.text}</li>
+                            <li className="text-sm md:text-base">{item.text}</li>
                           </ul>
                         )
                       )}
@@ -143,7 +135,6 @@ export default function HeroSlider() {
           </ul>
         </div>
 
-        {/* Bullet Nav */}
         <div
           className="glide__bullets flex justify-center mt-4"
           data-glide-el="controls[nav]"
@@ -153,7 +144,7 @@ export default function HeroSlider() {
               key={idx}
               className="glide__bullet focus:outline-none"
               data-glide-dir={`=${idx}`}
-            ></button>
+            />
           ))}
         </div>
       </div>

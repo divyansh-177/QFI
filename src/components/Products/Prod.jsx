@@ -70,7 +70,7 @@ const products = [
 
 export default function Prod() {
   useEffect(() => {
-    window.scrollTo(0, 230);
+    window.scrollTo(0, 0);
   }, []);
  {
   const points = [
