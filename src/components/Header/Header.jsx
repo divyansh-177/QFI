@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { FaPhoneAlt, FaMapMarkerAlt, FaEnvelope, FaClock, FaAngleDown, FaDownload, FaBars, FaInfoCircle } from 'react-icons/fa';
 import profilePdf from '/QFI_PROFILE.pdf';
-
+ 
 export default function Header() {
   const [menuOpen, setMenuOpen] = useState(false);
   const [infoMenuOpen, setInfoMenuOpen] = useState(false);
