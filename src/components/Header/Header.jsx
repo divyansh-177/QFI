@@ -117,7 +117,7 @@ export default function Header() {
                 <li><Link to="/contact" className="hover:text-orange-700 transition">Contact Us</Link></li>
                 <li>
                   <a
-                    href="./QFI_PROFILE.pdf"
+                    href="/QFI_PROFILE.pdf"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="flex items-center hover:text-orange-700 transition"
