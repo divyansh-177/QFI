@@ -117,7 +117,7 @@ export default function Header() {
                 <li><Link to="/contact" className="hover:text-orange-700 transition">Contact Us</Link></li>
                 <li>
                   <a
-                    href="./../../public/QFI PROFILE.pdf"
+                    href="QFI PROFILE.pdf"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="flex items-center hover:text-orange-700 transition"
@@ -125,16 +125,7 @@ export default function Header() {
                     <FaDownload className="mr-1" /> Profile
                   </a>
                 </li>
-                <li>
-                  <a
-                    href="/docs/AVT_Fastners_2023.pdf"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="flex items-center hover:text-orange-700 transition"
-                  >
-                    <FaDownload className="mr-1" /> Catalouge
-                  </a>
-                </li>
+                
               </ul>
             </nav>
           </div>
