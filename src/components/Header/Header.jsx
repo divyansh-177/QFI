@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { FaPhoneAlt, FaMapMarkerAlt, FaEnvelope, FaClock, FaAngleDown, FaDownload, FaBars, FaInfoCircle } from 'react-icons/fa';
-import profilePdf from '/QFI_PROFILE.pdf';
+
  
 export default function Header() {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -118,13 +118,14 @@ export default function Header() {
                 <li><Link to="/contact" className="hover:text-orange-700 transition">Contact Us</Link></li>
                 <li>
                   <a
-                    href={profilePdf}
+                    href="/QFI_Profile.pdf"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="flex items-center hover:text-orange-700 transition"
                   >
                     <FaDownload className="mr-1" /> Profile
                   </a>
+
                 </li>
                 
               </ul>
