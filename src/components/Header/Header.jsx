@@ -6,7 +6,7 @@ import { FaPhoneAlt, FaMapMarkerAlt, FaEnvelope, FaClock, FaAngleDown, FaDownloa
 export default function Header() {
   const [menuOpen, setMenuOpen] = useState(false);
   const [infoMenuOpen, setInfoMenuOpen] = useState(false);
-
+ 
   // Close menus when clicking outside
   React.useEffect(() => {
     const closeMenus = (e) => {
